@@ -34,11 +34,25 @@
     "pnpm": ">=11.0.0"
   },
   "devDependencies": {
+    "@ianvs/prettier-plugin-sort-imports": "^4.7.1",
     "prettier": "^3.8.3",
+    "prettier-plugin-svelte": "^4.0.0",
+    "prettier-plugin-tailwindcss": "^0.8.0",
     "tsdown": "^0.22.0",
     "typescript": "^6.0.3"
   },
   "peerDependencies": {
-    "prettier": "^3.8.3"
+    "@ianvs/prettier-plugin-sort-imports": "^4.7.1",
+    "prettier": "^3.8.3",
+    "prettier-plugin-svelte": "^4.0.0",
+    "prettier-plugin-tailwindcss": "^0.8.0"
+  },
+  "peerDependenciesMeta": {
+    "prettier-plugin-svelte": {
+      "optional": true
+    },
+    "prettier-plugin-tailwindcss": {
+      "optional": true
+    }
   }
 }
