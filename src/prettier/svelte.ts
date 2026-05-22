@@ -1,11 +1,10 @@
 import type { Config } from "prettier";
 
-import { plugins, frameworkOverrides, importOrder } from "./shared";
-import base from ".";
+import { frameworkOverrides, plugins } from "./shared";
+import tsConfig from "./ts";
 
 export default {
-  ...base,
+  ...tsConfig,
   plugins: [...plugins.common, ...plugins.svelte],
-  importOrder,
   overrides: [frameworkOverrides.svelte],
 } satisfies Config;

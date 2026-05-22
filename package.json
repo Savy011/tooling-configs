@@ -8,6 +8,10 @@
       "import": "./dist/prettier/index.js",
       "types": "./dist/prettier/index.d.ts"
     },
+    "./prettier/ts": {
+      "import": "./dist/prettier/ts.js",
+      "types": "./dist/prettier/ts.d.ts"
+    },
     "./prettier/svelte": {
       "import": "./dist/prettier/svelte.js",
       "types": "./dist/prettier/svelte.d.ts"
@@ -21,7 +25,8 @@
     "dist"
   ],
   "scripts": {
-    "build": "tsdown"
+    "build": "tsdown",
+    "fmt": "prettier --write ."
   },
   "keywords": [],
   "author": {
@@ -39,7 +44,8 @@
     "prettier-plugin-svelte": "^4.0.0",
     "prettier-plugin-tailwindcss": "^0.8.0",
     "tsdown": "^0.22.0",
-    "typescript": "^6.0.3"
+    "typescript": "^6.0.3",
+    "@savy011/config": "file:."
   },
   "peerDependencies": {
     "@ianvs/prettier-plugin-sort-imports": "^4.7.1",

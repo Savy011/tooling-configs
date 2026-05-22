@@ -1,7 +1,7 @@
 import type { Config } from "prettier";
 
-import svelteConfig from "./svelte";
 import { plugins } from "./shared";
+import svelteConfig from "./svelte";
 
 export default {
   ...svelteConfig,
