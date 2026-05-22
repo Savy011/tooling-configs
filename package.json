@@ -1,10 +1,27 @@
 {
   "name": "@savy011/config",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "tooling configs based on my preferences.",
-  "main": "index.js",
+  "type": "module",
+  "exports": {
+    "./prettier": {
+      "import": "./dist/prettier/index.js",
+      "types": "./dist/prettier/index.d.ts"
+    },
+    "./prettier/svelte": {
+      "import": "./dist/prettier/svelte.js",
+      "types": "./dist/prettier/svelte.d.ts"
+    },
+    "./prettier/svelte-tw": {
+      "import": "./dist/prettier/svelte-tw.js",
+      "types": "./dist/prettier/svelte-tw.d.ts"
+    }
+  },
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsdown"
   },
   "keywords": [],
   "author": {
@@ -13,7 +30,15 @@
   },
   "license": "ISC",
   "engines": {
-    "node": ">24.0.0",
+    "node": ">=24.0.0",
     "pnpm": ">=11.0.0"
+  },
+  "devDependencies": {
+    "prettier": "^3.8.3",
+    "tsdown": "^0.22.0",
+    "typescript": "^6.0.3"
+  },
+  "peerDependencies": {
+    "prettier": "^3.8.3"
   }
 }
